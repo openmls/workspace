@@ -11,7 +11,7 @@ show_help()
     echo "                 branch       list branches for all repositories"
 }
 
-source config.config
+source config
 
 repos=( 
     evercrypt-rust
