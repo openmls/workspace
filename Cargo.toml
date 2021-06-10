@@ -1,0 +1,36 @@
+[workspace]
+members = [
+    "evercrypt-rust/evercrypt-rs",
+    "evercrypt-rust/evercrypt-sys",
+    "algorithm-identifiers-rs",
+    "key-store-rs",
+    "hpke-rs",
+    "crypto",
+    "openmls/openmls",
+    "tls-codec/tls_codec",
+    "tls-codec/tls_codec_derive",
+]
+exclude = [
+    "openmls",
+    "evercrypt-rust",
+]
+
+[patch.'https://github.com/openmls/tls_codec']
+tls_codec = { path = "tls-codec/tls_codec" }
+tls_codec_derive = { path = "tls-codec/tls_codec_derive" }
+
+[patch.'https://github.com/openmls/crypto']
+openmls-crypto = { path = "crypto" }
+
+[patch.'https://github.com/franziskuskiefer/hpke-rs']
+hpke-rs = { path = "hpke-rs" }
+
+[patch.'https://github.com/franziskuskiefer/evercrypt-rust']
+evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
+evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
+
+[patch.'https://github.com/franziskuskiefer/key-store-rs']
+key-store = { path = "key-store-rs" }
+
+[patch.'https://github.com/franziskuskiefer/algorithm-identifiers-rs.git']
+crypto_algorithms = { path = "algorithm-identifiers-rs" }
