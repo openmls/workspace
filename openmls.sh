@@ -49,7 +49,7 @@ while [ $# -gt 0 ]; do
             echo "Cloning repositories"
             for repo in "${repo_urls[@]}"
             do
-                git clone $repo
+                git clone --recurse-submodules $repo
             done
             ;;
         pull)
