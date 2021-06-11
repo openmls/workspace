@@ -30,7 +30,12 @@ evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
 evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
 
 [patch.'https://github.com/franziskuskiefer/key-store-rs']
-key-store = { path = "key-store-rs" }
+key_store = { path = "key-store-rs" }
 
 [patch.'https://github.com/franziskuskiefer/algorithm-identifiers-rs.git']
 crypto_algorithms = { path = "algorithm-identifiers-rs" }
+
+[patch.crates-io]
+evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
+evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
+hpke-rs = { path = "hpke-rs" }
