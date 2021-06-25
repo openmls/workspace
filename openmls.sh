@@ -3,12 +3,13 @@
 # Usage info
 show_help()
 {
-    echo "Usage: ./openmls [setup] [pull] [switch] [clear] [branch]"
+    echo "Usage: ./openmls [setup] [pull] [switch] [clear] [branch] [status]"
     echo "                 setup        clone repositories for the first time"
     echo "                 switch       switch branches according to config"
     echo "                 pull         pull all repositories"
     echo "                 clear        delete all local repositories"
     echo "                 branch       list branches for all repositories"
+    echo "                 status       git status on all repositories"
 }
 
 source config
@@ -66,6 +67,15 @@ while [ $# -gt 0 ]; do
             do
                 b=$(git -C $repo branch --show-current)
                 printf "%-30s %s %s\n" $repo $b
+            done
+            echo ""
+            ;;
+        status)
+            echo ""
+            for repo in "${repos[@]}"
+            do
+                echo " > $repo git status ..."
+                git -C $repo status
             done
             echo ""
             ;;

@@ -15,7 +15,7 @@ exclude = [
     "evercrypt-rust",
 ]
 
-[patch.'https://github.com/openmls/tls_codec']
+[patch.'https://github.com/openmls/tls-codec']
 tls_codec = { path = "tls-codec/tls_codec" }
 tls_codec_derive = { path = "tls-codec/tls_codec_derive" }
 
@@ -39,3 +39,5 @@ crypto_algorithms = { path = "algorithm-identifiers-rs" }
 evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
 evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
 hpke-rs = { path = "hpke-rs" }
+tls_codec = { path = "tls-codec/tls_codec" }
+tls_codec_derive = { path = "tls-codec/tls_codec_derive" }
