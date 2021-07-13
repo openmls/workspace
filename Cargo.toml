@@ -7,6 +7,11 @@ members = [
     "hpke-rs",
     "crypto",
     "openmls/openmls",
+    "openmls/delivery-service/ds-lib",
+    "openmls/delivery-service/ds",
+    "openmls/test_utils",
+    "openmls/test_macros",
+    "openmls/cli",
     "tls-codec/tls_codec",
     "tls-codec/tls_codec_derive",
 ]
