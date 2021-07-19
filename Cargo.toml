@@ -37,7 +37,7 @@ evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
 key_store = { path = "key-store-rs" }
 
 [patch.'https://github.com/franziskuskiefer/algorithm-identifiers-rs.git']
-crypto_algorithms = { path = "algorithm-identifiers-rs" }
+algorithm_identifiers = { path = "algorithm-identifiers-rs" }
 
 [patch.crates-io]
 evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
