@@ -6,5 +6,5 @@ algorithm_identifiers_rs_branch=main
 key_store_rs_branch=main
 hpke_rs_branch=openmls-crypto
 crypto_branch=main
-openmls_branch=workspace-reorg
 tls_codec_branch=main
+openmls_branch=main
