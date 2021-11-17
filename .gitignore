@@ -1,9 +1,2 @@
 /target
 Cargo.lock
-/algorithm-identifiers-rs
-/key-store-rs
-/hpke-rs
-/crypto
-/openmls
-/tls-codec
-/evercrypt-rust

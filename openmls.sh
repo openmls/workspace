@@ -35,13 +35,13 @@ branches=(
 )
 
 repo_urls=(
-    https://github.com/franziskuskiefer/evercrypt-rust
-    https://github.com/franziskuskiefer/algorithm-identifiers-rs
-    https://github.com/franziskuskiefer/key-store-rs
-    https://github.com/franziskuskiefer/hpke-rs
-    https://github.com/openmls/crypto
-    https://github.com/openmls/openmls
-    https://github.com/openmls/tls-codec
+    git@github.com:franziskuskiefer/evercrypt-rust.git
+    git@github.com:franziskuskiefer/algorithm-identifiers-rs.git
+    git@github.com:franziskuskiefer/key-store-rs.git
+    git@github.com:franziskuskiefer/hpke-rs.git
+    git@github.com:openmls/crypto.git
+    git@github.com:openmls/openmls.git
+    git@github.com:openmls/tls-codec.git
 )
 
 while [ $# -gt 0 ]; do
@@ -51,6 +51,11 @@ while [ $# -gt 0 ]; do
             for repo in "${repo_urls[@]}"
             do
                 git clone --recurse-submodules $repo
+                for i in "${!repos[@]}"
+                do
+                    echo "Switch to branch ${!branches[$i]} for ${repos[$i]} ..."
+                    git -C ${repos[$i]} switch "${!branches[$i]}"
+                done
             done
             ;;
         pull)
