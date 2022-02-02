@@ -21,7 +21,6 @@ repos=(
     hpke-rs
     crypto
     openmls
-    tls-codec
 )
 
 branches=(
@@ -31,7 +30,6 @@ branches=(
     hpke_rs_branch
     crypto_branch
     openmls_branch
-    tls_codec_branch
 )
 
 repo_urls=(
@@ -41,7 +39,6 @@ repo_urls=(
     git@github.com:franziskuskiefer/hpke-rs.git
     git@github.com:openmls/crypto.git
     git@github.com:openmls/openmls.git
-    git@github.com:openmls/tls-codec.git
 )
 
 while [ $# -gt 0 ]; do

@@ -1,7 +1,5 @@
 [workspace]
 members = [
-    "evercrypt-rust/evercrypt-rs",
-    "evercrypt-rust/evercrypt-sys",
     "hpke-rs",
     "hpke-rs/evercrypt_provider",
     "hpke-rs/rust_crypto_provider",
@@ -13,7 +11,6 @@ members = [
     "openmls/memory_keystore",
     "openmls/openmls_rust_crypto",
     "openmls/rust_crypto",
-    "openmls/test_macros",
     "openmls/traits",
     "openmls/cli",
 ]
@@ -22,26 +19,14 @@ exclude = [
     "evercrypt-rust",
 ]
 
-[patch.'https://github.com/openmls/tls-codec']
-tls_codec = { path = "tls-codec/tls_codec" }
-tls_codec_derive = { path = "tls-codec/tls_codec_derive" }
+# [patch.'https://github.com/franziskuskiefer/hpke-rs']
+# hpke-rs = { path = "hpke-rs" }
+# hpke-rs-crypto = { path = "hpke-rs/traits" }
+# hpke-rs-rust-crypto = { path = "hpke-rs/rust_crypto_provider" }
+# hpke-rs-evercrypt = { path = "hpke-rs/evercrypt_provider" }
 
-[patch.'https://github.com/franziskuskiefer/hpke-rs']
-hpke-rs = { path = "hpke-rs" }
-hpke-rs-crypto = { path = "hpke-rs/traits" }
-hpke-rs-rust-crypto = { path = "hpke-rs/rust_crypto_provider" }
-hpke-rs-evercrypt = { path = "hpke-rs/evercrypt_provider" }
-
-[patch.'https://github.com/franziskuskiefer/evercrypt-rust']
-evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
-evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
-
-[patch.crates-io]
-evercrypt = { path = "evercrypt-rust/evercrypt-rs" }
-evercrypt-sys = { path = "evercrypt-rust/evercrypt-sys" }
-hpke-rs = { path = "hpke-rs" }
-tls_codec = { path = "tls-codec/tls_codec" }
-tls_codec_derive = { path = "tls-codec/tls_codec_derive" }
-hpke-rs-crypto = { path = "hpke-rs/traits" }
-hpke-rs-rust-crypto = { path = "hpke-rs/rust_crypto_provider" }
-hpke-rs-evercrypt = { path = "hpke-rs/evercrypt_provider" }
+# [patch.crates-io]
+# hpke-rs = { path = "hpke-rs" }
+# hpke-rs-crypto = { path = "hpke-rs/traits" }
+# hpke-rs-rust-crypto = { path = "hpke-rs/rust_crypto_provider" }
+# hpke-rs-evercrypt = { path = "hpke-rs/evercrypt_provider" }
